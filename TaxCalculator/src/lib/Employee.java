@@ -19,7 +19,12 @@ public class Employee {
 	private int monthWorkingInYear;
 	
 	private boolean isForeigner;
-	private boolean gender; //true = Laki-laki, false = Perempuan
+	private enum jeniskelamin {
+		lakilaki,
+		perempuan
+	}
+
+	private jeniskelamin gender;
 	
 	private int monthlySalary;
 	private int otherMonthlyIncome;
@@ -31,7 +36,7 @@ public class Employee {
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 	
-	public Employee(String employeeId, String lastName, String idNumber, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
+	public Employee(String employeeId, String lastName, String idNumber, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, jeniskelamin gender) {
 		this.employeeId = employeeId;
 
 		this.lastName = lastName;
